@@ -95,7 +95,8 @@
             function login() {
                 FB.login(
                          function(response) {
-                         if (response.session) {
+                         //if (response.session) {
+                         if (response.authResponse) {
                          alert('logged in');
                          } else {
                          alert('not logged in');
@@ -146,7 +147,7 @@
                                       try {
                                       alert('Device is ready! Make sure you set your app_id below this alert.');
 									  //Put your FB APP_ID here!
-                                      FB.init({ appId: "APP_ID", nativeInterface: CDV.FB, useCachedDialogs: false });
+                                      FB.init({ appId: "553642721338198", nativeInterface: CDV.FB, useCachedDialogs: false });
                                       document.getElementById('data').innerHTML = "";
                                       } catch (e) {
                                       alert(e);
